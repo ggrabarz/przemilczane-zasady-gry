@@ -1,0 +1,14 @@
+name: Fix and Deploy
+on:
+  push:
+    branches: [master]
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  deploy:
+    uses: ggrabarz/.github/.github/workflows/fix-and-deploy.yml@master
