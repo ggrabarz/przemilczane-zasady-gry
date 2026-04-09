@@ -1,7 +1,11 @@
 name: Fix and Deploy
 on:
   push:
-    branches: [master]
+    branches:
+      - master
+      - main
+    paths-ignore:
+      - README.md
 permissions:
   contents: write
   pages: write
